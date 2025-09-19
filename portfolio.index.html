@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobhit Varada's Professional Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text */
+        }
+        .scroll-mt-24 {
+            scroll-margin-top: 6rem; /* Adjust for fixed header height */
+        }
+        .section-header {
+            border-left: 4px solid #3b82f6; /* Accent color */
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        .card {
+            background-color: #2d3748; /* Dark card background */
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .icon-svg {
+            fill: #a0aec0;
+            transition: fill 0.3s ease;
+        }
+        .icon-svg:hover {
+            fill: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-800 shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl md:text-2xl font-bold text-gray-50">Sobhit Varada</a>
+            <div class="hidden md:flex space-x-6 lg:space-x-10">
+                <a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">About Me</a>
+                <a href="#experience" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Projects</a>
+                <a href="#skills" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Skills</a>
+                <a href="#education" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Education</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-400 hover:text-blue-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 shadow-lg py-4">
+            <a href="#about" class="block px-4 py-2 text-gray-400 hover:bg-gray-700">About Me</a>
+            <a href="#experience" class="block px-4 py-2 text-gray-400 hover:bg-gray-700">Experience</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-400 hover:bg-gray-700">Projects</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-400 hover:bg-gray-700">Skills</a>
+            <a href="#education" class="block px-4 py-2 text-gray-400 hover:bg-gray-700">Education</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 mt-24">
+
+        <!-- Hero Section -->
+        <section id="hero" class="flex flex-col md:flex-row items-center justify-between py-16 text-center md:text-left">
+            <div class="max-w-xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-50 leading-tight">SVSS SOBHIT VARADA</h1>
+                <p class="text-xl md:text-2xl mt-2 text-gray-400 font-medium">Sr. Java Full Stack Developer</p>
+                <p class="mt-6 text-gray-300 leading-relaxed">Over 7+ years of Full Stack Development experience delivering enterprise applications with Java, Spring Boot, React, Angular, Microservices, and Cloud-Native Architectures across ERP, Analytics, and AI-driven platforms.</p>
+                <div class="mt-8 space-x-4 flex justify-center md:justify-start items-center">
+                    <a href="mailto:varadasurya680@gmail.com" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition-colors duration-300">Email Me</a>
+                    <a href="https://www.linkedin.com/in/svss-sobhit-varada-b49a71194/" target="_blank" class="inline-block" aria-label="LinkedIn Profile">
+                        <svg class="w-8 h-8 icon-svg" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>LinkedIn</title>
+                            <path d="M20.447 20.452h-3.554v-5.629c0-1.325-.02-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.727h-3.554V9.29h3.416v1.579h.046c.477-.9 1.637-1.85 3.37-1.85 3.606 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.217a2.868 2.868 0 01-2.836-2.868 2.868 2.868 0 012.837-2.868c1.571 0 2.836 1.294 2.837 2.868 0 1.571-1.292 2.868-2.837 2.868zm1.785 13.235h-3.554V9.29h3.554v11.162z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Profile Image -->
+            <div class="w-64 h-64 mt-12 md:mt-0 rounded-full flex-shrink-0 overflow-hidden shadow-lg">
+                <img src="https://i.imgur.com/5JJpxiw.png" alt="Sobhit Varada's Professional Headshot" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold section-header">About Me</h2>
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-md leading-relaxed">
+                <p>Over 7+ years of Full Stack Development experience delivering enterprise applications with Java, Spring Boot, React, Angular, Microservices, and Cloud-Native Architectures across ERP, Analytics, and AI-driven platforms.</p>
+                <p class="mt-4">I have developed and deployed end-to-end applications using Java 11/17, Spring Boot, React, Angular, and Micro-Frontend Architecture, enabling modular, scalable, and maintainable enterprise solutions. My expertise includes designing and integrating RESTful APIs, building high-performance microservices, and implementing enterprise-grade security. I am also skilled in applying state management, automating ETL workflows, and engineering Cloud-Native Solutions on AWS and Azure.</p>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold section-header">Projects</h2>
+            <div class="space-y-12">
+                <!-- Project Card 1 -->
+                <div class="card p-8">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <h3 class="text-2xl font-bold text-blue-400">Micro-Frontend Analytics Dashboard</h3>
+                        <p class="text-gray-500 mt-2 md:mt-0">Source: ADT Experience</p>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">Developed a unified application using a micro-frontend architecture, integrating React and Angular modules to create dashboards for predictive analytics. The project focused on optimizing performance with lazy loading and state management with Redux and Angular Services, ensuring a seamless user experience for high-traffic dashboards.</p>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="card p-8">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <h3 class="text-2xl font-bold text-blue-400">ERP Automation Microservices</h3>
+                        <p class="text-gray-500 mt-2 md:mt-0">Source: Cognizant Experience</p>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">Designed and implemented a suite of Spring Boot microservices to automate key ERP processes. The solution leveraged RESTful APIs to connect with SAP and Oracle systems, and integrated Apache Kafka for real-time, event-driven communication. The project streamlined operations and significantly reduced manual intervention.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold section-header">Experience</h2>
+            <div class="space-y-12">
+                <!-- Experience Card 1 -->
+                <div class="card p-8">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-blue-400">Sr. Java Full Stack Developer</h3>
+                        <p class="text-gray-500">Sept 2023 to Present</p>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-300 mb-4">ADT, Dallas, Texas</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Implemented a micro-frontend architecture that allowed React and Angular modules to coexist in a single application.</li>
+                        <li>Built ReactJS dashboards for predictive analytics and Angular components for form-driven workflows.</li>
+                        <li>Optimized performance with lazy loading, route-based code splitting, and memoization, reducing load times by more than 25%.</li>
+                        <li>Designed and deployed Spring Boot microservices to expose REST APIs consumed by both React and Angular micro-frontends.</li>
+                        <li>Automated CI/CD workflows using Jenkins, GitLab CI/CD, and Maven, cutting release cycle times by 30–40%.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="card p-8">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-blue-400">Java Full Stack Developer</h3>
+                        <p class="text-gray-500">Feb 2020 to Aug 2023</p>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-300 mb-4">Cognizant, Chicago, Illinois</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Designed and implemented Spring Boot microservices to support ERP automation modules.</li>
+                        <li>Built and exposed RESTful APIs that connected MyConcerto with SAP and Oracle systems.</li>
+                        <li>Integrated Apache Kafka producers and consumers to implement event-driven communication, cutting integration latency by nearly 30%.</li>
+                        <li>Used Spring AOP to implement cross-cutting concerns such as logging, auditing, and exception handling.</li>
+                        <li>Conducted unit and integration testing with JUnit, Mockito, and Postman collections, raising test coverage above 85%.</li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Card 3 -->
+                <div class="card p-8">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-blue-400">Java Developer</h3>
+                        <p class="text-gray-500">Mar 2018 to July 2020</p>
+                    </div>
+                    <p class="text-lg font-semibold text-gray-300 mb-4">Nitido, Hyderabad, India</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Worked on UI frameworks and technologies including Angular (upgraded Angular 4 to 6), React.js, Ajax, CSS, and JavaScript.</li>
+                        <li>Developed Java/J2EE-based services using Hibernate and Spring (MVC, Batch, Security) for data ingestion pipelines.</li>
+                        <li>Built RESTful and GraphQL APIs and Node.js microservices to support efficient server-side architecture.</li>
+                        <li>Implemented CI/CD pipelines using Jenkins, GitHub Actions, Terraform, and Gradle builds.</li>
+                        <li>Monitored systems using Grafana, Prometheus, and Datadog to ensure reliability and performance.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="py-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold section-header">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skills Card 1 -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-50">Programming Languages</h3>
+                    <p class="text-gray-300">Java 11/17, SQL, Python, C, C++, C#</p>
+                </div>
+                <!-- Skills Card 2 -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-50">Frameworks & Technologies</h3>
+                    <p class="text-gray-300">Spring (Boot, Security, Batch, AOP, Data JPA), Hibernate, Microservices, SOA, Angular (2–18), ReactJS, Redux, OAuth2, JWT, SSO, RESTful APIs, SOAP</p>
+                </div>
+                <!-- Skills Card 3 -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-50">Cloud Platforms & Services</h3>
+                    <p class="text-gray-300">AWS (EC2, Lambda, S3, RDS, DynamoDB, Redshift), Azure (DevOps, App Services, Functions)</p>
+                </div>
+                <!-- Skills Card 4 -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-50">Databases</h3>
+                    <p class="text-gray-300">PostgreSQL, Oracle, MySQL, MongoDB, Cassandra</p>
+                </div>
+                <!-- Skills Card 5 -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-50">DevOps, Build Tools</h3>
+                    <p class="text-gray-300">Jenkins, GitLab CI/CD, Azure, DevOps, Maven, Gradle, Docker, Kubernetes (EKS, OpenShift), Terraform, Ansible</p>
+                </div>
+                <!-- Skills Card 6 -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2 text-gray-50">Big Data & Analytics</h3>
+                    <p class="text-gray-300">Apache Kafka, Apache Spark, Hadoop</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 scroll-mt-24">
+            <h2 class="text-3xl font-bold section-header">Education</h2>
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-md">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold text-gray-50">Master of Science, Information Technology and Management</h3>
+                    <p class="text-lg font-semibold text-gray-300">University of Texas at Dallas</p>
+                    <p class="text-gray-500">August 2023 – May 2025</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-50">Bachelor of Technology, Computer Science</h3>
+                    <p class="text-lg font-semibold text-gray-300">SRM Institute of Science & Technology</p>
+                    <p class="text-gray-500">July 2019 – June 2022</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-4">Contact Me</h3>
+            <div class="space-y-2 text-lg">
+                <p>Email: <a href="mailto:varadasurya680@gmail.com" class="text-blue-400 hover:text-blue-300">varadasurya680@gmail.com</a></p>
+                <p>Phone: +1469-278-5980</p>
+            </div>
+            <p class="mt-8 text-gray-400">&copy; 2023 Sobhit Varada. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu after clicking
+                    if (document.getElementById('mobile-menu').classList.contains('flex')) {
+                        document.getElementById('mobile-menu').classList.remove('flex');
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+        });
+    </script>
+</body>
+</html>
